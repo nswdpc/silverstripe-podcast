@@ -9,6 +9,7 @@ use SilverStripe\Assets\Image;
 use SilverStripe\ORM\DataObject;
 use SilverStripe\ORM\FieldType\DBDatetime;
 use SilverStripe\Security\Permission;
+use SilverStripe\Versioned\Versioned;
 
 class PodcastEpisode extends DataObject
 {
@@ -54,6 +55,10 @@ class PodcastEpisode extends DataObject
 
     private static $better_buttons_actions = [
         'getTags'
+    ];
+
+    private static $extensions = [
+        Versioned::class
     ];
 
     public function populateDefaults()

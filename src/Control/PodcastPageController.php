@@ -2,6 +2,7 @@
 
 namespace Lukereative\Podcast\Control;
 
+use PageController;
 use Lukereative\Podcast\Model\PodcastEpisode;
 use SilverStripe\CMS\Controllers\ContentController;
 use SilverStripe\Control\HTTPRequest;
@@ -9,7 +10,7 @@ use SilverStripe\Control\RSS\RSSFeed;
 use SilverStripe\ORM\PaginatedList;
 use SilverStripe\View\Requirements;
 
-class PodcastPageController extends ContentController
+class PodcastPageController extends PageController
 {
     private static $allowed_actions = [
         'rss',

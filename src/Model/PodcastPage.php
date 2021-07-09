@@ -29,7 +29,7 @@ class PodcastPage extends Page implements PermissionProvider
         'PodcastTitle' => 'Varchar(255)',
         'Subtitle' => 'Varchar(255)',
         'Language' => 'Varchar(32)',
-        'Author' => 'Varchar(127)',
+        'PodcastAuthor' => 'Varchar(255)',
         'Summary' => 'HTMLText',
         'OwnerName' => 'Varchar(127)',
         'OwnerEmail' => 'Varchar(127)',
@@ -199,7 +199,7 @@ class PodcastPage extends Page implements PermissionProvider
                 $podcastImage,
                 TextField::create('Subtitle'),
                 $languageField,
-                TextField::create('Author'),
+                TextField::create('PodcastAuthor', 'Author'),
                 TextAreaField::create('Summary'),
                 TextField::create('OwnerName', 'Owner Name'),
                 EmailField::create('OwnerEmail', 'Owner Email'),
@@ -224,7 +224,7 @@ class PodcastPage extends Page implements PermissionProvider
 
         return $fields;
     }
-    
+
     public function canEdit($member = null)
     {
         return Permission::check('PODCAST_ADMIN');

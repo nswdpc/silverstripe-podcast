@@ -30,7 +30,7 @@ class PodcastEpisode extends DataObject
         'Title' => 'Varchar(255)',
         'Subtitle' => 'Varchar(255)',
         'Summary' => 'HTMLText',
-        'Author' => 'Varchar(127)',
+        'PodcastAuthor' => 'Varchar(255)',
         'Block' => 'Boolean',
         'Explicit' => 'Enum("No, Clean, Yes");',
         'Date' => 'Datetime',
@@ -40,7 +40,7 @@ class PodcastEpisode extends DataObject
     private static $searchable_fields = [
         'Title',
         'Subtitle',
-        'Author',
+        'PodcastAuthor',
         'Block',
         'Explicit',
         'Date',

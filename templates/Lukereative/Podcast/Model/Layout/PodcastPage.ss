@@ -24,8 +24,8 @@
                         <% if $Subtitle %>
                             <h3 class="episode__subtitle">$Subtitle</h3>
                         <% end_if %>
-                        <% if $Author %>
-                            <h4 class="episode__author">$Author</h4>
+                        <% if $PodcastAuthor %>
+                            <h4 class="episode__author">$PodcastAuthor</h4>
                         <% end_if %>
                         </header>
                         <% if $Date || $File %>

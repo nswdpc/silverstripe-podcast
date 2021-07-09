@@ -17,8 +17,8 @@
             <% if $Subtitle %>
                 <h2 class="episode__subtitle">$Subtitle</h2>
             <% end_if %>
-            <% if $Author %>
-                <h3 class="episode__author">$Author</h2>
+            <% if $PodcastAuthor %>
+                <h3 class="episode__author">$PodcastAuthor</h2>
             <% end_if %>
             </header>
             <% if $Summary %>
